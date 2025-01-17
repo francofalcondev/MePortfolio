@@ -1,0 +1,54 @@
+---
+
+import Footer from "@/components/Footer.astro"
+import Header from "@/components/Header.astro"
+import "@fontsource-variable/onest"
+/*
+		<div
+		class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#2736e3,rgba(255,255,255,0.9))]
+		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#141d96,rgba(255,255,255,0))]"
+	  ></div>
+*/
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body class="relative text-black dark:text-white">
+		<div
+		class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+		bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#2736e3,rgba(255,255,255,0.9))]
+		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#11198a,rgba(255,255,255,0))]"
+	  ></div>
+		<Header/>
+		<slot />
+
+		
+
+		<style is:global>
+	
+			html {
+			font-family: "Onest Variable", system-ui, sans-serif;
+			scroll-behavior: smooth;
+		
+			}
+			body {
+			display: flex;
+			justify-content: center;
+			min-height: 100vh;
+			overflow-x: hidden;
+			margin: 0;
+			padding: 0;
+			}
+
+		
+		</style>
+		
+	</body>
+</html>

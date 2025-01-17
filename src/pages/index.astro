@@ -1,0 +1,56 @@
+---
+
+import Hero from '@/components/Hero.astro';
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from "@/components/SectionContainer.astro"
+import AboutMeIcon from '@/assets/icons/AboutMeIcon.astro' 
+import TitleSection from "@/components/TitleSection.astro"
+import AboutMe from '@/components/AboutMe.astro';
+import Experience from '@/components/Experience.astro';
+import BriefcaseIcon from '@/assets/icons/BriefcaseIcon.astro';
+import BoxIcon from '@/assets/icons/BoxIcon.astro';
+import Projects from '@/components/Projects.astro';
+import Footer from '@/components/Footer.astro';
+
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+    <main class="px-4">
+            <SectionContainer  class="py-16 md:py-36" >
+                <Hero/>
+                <slot/>
+            </SectionContainer>
+            <div class="space-y-28 md:mb-32">
+
+                <SectionContainer id="about-me">
+                    <TitleSection>
+                        <AboutMeIcon class="size-8"/>
+                        Sobre mi
+                    </TitleSection>
+                    <AboutMe/>
+                </SectionContainer>
+                <SectionContainer id="experience">
+                    <TitleSection>
+                      <BriefcaseIcon class="size-8" />
+                      Experiencia laboral
+                    </TitleSection>
+                    <Experience />
+                  </SectionContainer>
+            </div>
+            <SectionContainer id="projects">
+                <TitleSection>
+                  <BoxIcon class="size-8" />
+                   Proyectos
+                </TitleSection>
+                
+                <Projects/>
+              </SectionContainer>
+            <SectionContainer>
+                <Footer/>
+            </SectionContainer>
+    </main >
+</Layout>

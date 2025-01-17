@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Jun 2022 - Nov 2022",
+    title: "React Native Developer",
+    company: "Kuna - Argentina 🇦🇷",
+    description:
+      "Desarrollé una aplicación de monitoreo satelital para campos de arroz, diseñada para optimizar el manejo agrícola mediante datos geoespaciales. Utilicé React Native con Expo para construir una solución completa, abarcando desde el diseño de la interfaz hasta la integración de mapas interactivos con Mapbox GL   Implementación de mapas interactivos con marcadores personalizados y datos dinámicos. Integración con APIs para obtener y procesar datos satelitales en tiempo real. Diseñé y maqueté las vistas de la aplicación, asegurando una experiencia de usuario intuitiva y eficiente.",
+    link: "https://kuna.app/",
+  },
+  {
+    date: "Oct 2022 - Jun 2024",
+    title: "Tutor React & Nodejs",
+    company: "Coderhouse - Argentina 🇦🇷",
+    description:
+    "Resolución de dudas a los alumnos dentro y fuera de clases Review y feedback de los trabajos prácticos. Enseñanza después de clases para temas dedicados.",
+    link: "https://www.coderhouse.com/ar?pipe_source=google&pipe_medium=cpc&pipe_campaign=0&gad_source=1&gclid=Cj0KCQiA1p28BhCBARIsADP9HrPs53MeM8FieHcbeNI8G5aITtEOz9mborSgGSqXX0idQD18qcHJlyEaAj3DEALw_wcB",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-600 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-6">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
